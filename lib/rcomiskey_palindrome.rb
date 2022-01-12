@@ -2,7 +2,7 @@
 
 require_relative "rcomiskey_palindrome/version"
 
-class String
+module RcomiskeyPalindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -13,7 +13,14 @@ class String
 
     # Returns content for palindrome testing.
     def processed_content
-      scan(/[a-z]/i).join.downcase
+      to_s.scan(/[a-z\d]/i).join.downcase
     end
+end
 
+class String
+  include RcomiskeyPalindrome
+end
+
+class Integer
+  include RcomiskeyPalindrome
 end
