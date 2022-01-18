@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rcomiskey_palindrome (0.2.1)
+    rcomiskey_palindrome (0.2.2)
 
 GEM
   remote: https://rubygems.org/
